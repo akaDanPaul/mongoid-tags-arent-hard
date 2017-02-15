@@ -4,6 +4,8 @@ require 'mongoid-tags-arent-hard' # and any other gems you need
 
 require 'database_cleaner'
 
+require 'rspec/collection_matchers'
+
 Mongoid.load!(File.join(File.dirname(__FILE__), "config.yml"), :test)
 # require File.join(File.dirname(__FILE__), "support", "models")
 

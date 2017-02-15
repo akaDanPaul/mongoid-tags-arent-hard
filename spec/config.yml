@@ -1,5 +1,7 @@
 test:
-  sessions:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
     default:
       database: mongoid_tags_arent_hard_test
       hosts:

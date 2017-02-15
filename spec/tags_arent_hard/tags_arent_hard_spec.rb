@@ -96,8 +96,8 @@ describe Mongoid::TagsArentHard do
       it "tracks changes correctly" do
         foo.save!
         foo.reload
-        foo.send("#{_name}=", [])
-        foo.send(_name) << ["foo", "bar"]
+        foo.push(tags: "foo")
+        puts foo.inspect
         changes = foo.changes
         changes[_name.to_s].should eql([[], ["foo", "bar"]])
       end
